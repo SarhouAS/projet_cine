@@ -9,9 +9,9 @@ html{
 
 header {
     color: white;
-    padding: 2rem;
+  /*   padding: 2rem; */
     list-style: none;
-    padding-left: 200px;
+   /*  padding-left: 200px; */
    
 }
 
@@ -21,13 +21,16 @@ header {
     display: flex;
     justify-content: flex-start;
     font-family: "Protest Revolution";
+    padding: 5rem;
+    background-color: #222;
+    line-height: 6.5rem;
 }
 
 .navigation li a{
     color: #fff;
     cursor: pointer;
     margin-right: 1.5rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     display: inline-block;
     text-transform: uppercase;
@@ -39,7 +42,7 @@ header {
     content:" ";
 }
 .navigation .active {
-    color: #ff0000;
+    color: #f31515;
 }
 
 main {
