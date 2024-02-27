@@ -69,8 +69,7 @@ main {
     margin: 45px auto;
     padding: 40px;
     color: #ffff;
-    max-width: 60%;
-    font-size: 18px;
+    font-size: 26px;
 }
 
 .paragraph-box {
@@ -116,6 +115,7 @@ main {
     color: #fff;
     border-radius: 0.3rem;
     cursor: pointer;
+    font-size: 16px; 
 }
 
 .submit-button {
@@ -205,8 +205,9 @@ div.form{
 
 .register-form {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 .register-form label {
@@ -221,4 +222,28 @@ div.form{
     margin-bottom: 1rem;
     border: 1px solid #fff;
     border-radius: 0.3rem;
+    font-size: 16px;
+}
+
+.email-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.email-form label {
+    display: block;
+    margin-top: 1.5rem;
+    color: #00F0FF;
+}
+
+.email-form input {
+    width: 100%;
+    padding: 1.5rem;
+    margin: 5px;
+    border: 1px solid #fff;
+    border-radius: 0.3rem;
+    font-size: 16px;
 }
