@@ -30,6 +30,9 @@ fieldset{
     border: 0;
     color: #ccc;
 }
+fieldset legend{
+    padding-left: 1rem;
+}
 .navigation li a{
     color: #fff;
     cursor: pointer;
@@ -245,7 +248,6 @@ div.form{
     align-items: center;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
 }
 
 .email-form label {
