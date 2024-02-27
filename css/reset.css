@@ -1,4 +1,5 @@
 /* reset */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
 html{
     font-size: 62.5%; /* 16px * 62.5% = 10.00rem */
 }
@@ -21,6 +22,7 @@ button, a{
     background-color: transparent;
     padding: 0;
     border: 0;
+    
 }
 img{
     display: inline-block;
