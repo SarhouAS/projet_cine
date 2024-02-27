@@ -21,9 +21,9 @@ header {
     display: flex;
     justify-content: flex-start;
     font-family: "Protest Revolution";
-    padding: 5rem;
-    background-color: #222;
-    line-height: 6.5rem;
+    padding: 2rem;
+    background: rgba(0,0,0,.5);
+    line-height: 2.5rem;
 }
 
 .navigation li a{
