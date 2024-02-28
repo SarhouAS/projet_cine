@@ -9,10 +9,7 @@ html{
 
 header {
     color: white;
-  /*   padding: 2rem; */
     list-style: none;
-   /*  padding-left: 200px; */
-   
 }
 
 .navigation {
@@ -159,7 +156,6 @@ footer {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -178,7 +174,6 @@ div.form{
     display: flex;
     margin: auto;
     width: 50%;
-    /* align-items: center; */
     justify-content: center;
     flex-direction: column;
 }
@@ -202,6 +197,7 @@ div.form{
 .image-box {
     width: 252px;
     height: 183px;
+    box-shadow: rgb(255, 255, 255) 0px 10px 36px 0px, rgb(255, 255, 255) 0px 0px 0px 1px;
 }
 
 .image-box-regis{
