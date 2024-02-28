@@ -103,6 +103,7 @@ main {
     color: #ffd700; 
 }
 
+
 .login-form {
     max-width: 100%;
     margin: 45px auto;
@@ -173,18 +174,29 @@ div.form{
     color: #fff;
 }
 
+.containerf{
+    display: flex;
+    margin: auto;
+    width: 50%;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+
 .image-films {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     margin-top: 20px;
+    width: 90rem;
 }
 
 .image-films img {
-    width: 100%;
-    max-width: 100px;
-    height: 100px;
+    width: 15rem;
+    min-height: 25rem;
     object-fit: cover;
+    box-shadow: rgb(255, 255, 255) 0px 10px 36px 0px, rgb(255, 255, 255) 0px 0px 0px 1px;
 }
 
 .image-box {

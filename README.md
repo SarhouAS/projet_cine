@@ -2,9 +2,9 @@
 ![cover](./asset/index.png)
 >Sujet du travail
 
-## Police de caractère : 
+## 📝Police de caractère : 
 ![police](./asset/police.png)
-## Palette couleur
+## 🎨Palette couleur
 ![palette](./asset/palette.png)
 
 [Publication](https://sarhouas.github.io/projet_cine/)
