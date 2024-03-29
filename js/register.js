@@ -10,8 +10,8 @@ $("form").submit(event => {
             lastname: $("#prenom").val(),
             email: $("#email").val(),
             pwd: $("#pwd").val(),
-            ville: $("#ville").val(),
-            pays: $("#pays").val()
+            city: $("#ville").val(),
+            country: $("#pays").val()
         },
         success: (res) => {
             
