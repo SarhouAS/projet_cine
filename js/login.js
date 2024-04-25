@@ -1,34 +1,47 @@
-const urlParams = new URLSearchParams(window.location.search); 
+const urlParams = new URLSearchParams(window.location.search);
 
 if (urlParams.get("logout")) {
-  
-    $.ajax({
-        url: "../php/logout.php", 
-        type: "GET",
-        dataType: "json",
-        success: () => {
-           
-            localStorage.removeItem("user");
+    fetch("../php/logout.php", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
         }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Erreur lors de la déconnexion.");
+        }
+        localStorage.removeItem("user");
+    })
+    .catch(error => {
+        console.error("Erreur: ", error.message);
     });
 }
 
-$("form").submit((event) => { 
-    event.preventDefault(); 
+document.querySelector("form").addEventListener("submit", event => {
+    event.preventDefault();
 
-    $.ajax({
-        url: "../php/login.php", 
-        type: "POST", 
-        dataType: "json", 
-        data: { 
-            email: $("#email").val(),
-            pwd: $("#password").val()
-        },
-        success: (res) => {
-            if (res.success) { 
-                localStorage.setItem("user", JSON.stringify(res.user)); 
-                window.location.replace("../index.html"); 
-            } else alert(res.error);
+    const formData = new FormData(event.target);
+
+    fetch("../php/login.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Erreur lors de la connexion.");
         }
+        return response.json();
+    })
+    .then(res => {
+        if (res.success) {
+            localStorage.setItem("user", JSON.stringify(res.user));
+            window.location.replace("../index.html");
+        } else {
+            throw new Error(res.error);
+        }
+    })
+    .catch(error => {
+        alert(error.message);
     });
 });

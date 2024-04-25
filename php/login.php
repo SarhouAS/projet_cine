@@ -15,18 +15,18 @@ if (empty(trim($_POST["email"])) || empty(trim($_POST["pwd"]))) {
     die;
 }
 
-$req = $db->prepare("SELECT * From user WHERE email = ?");
+$req = $db->prepare("SELECT * From client WHERE email = ?");
 $req->execute([$_POST["email"]]);
 
-$user = $req->fetch(PDO::FETCH_ASSOC);
+$client = $req->fetch(PDO::FETCH_ASSOC);
 
-if ($user && password_verify($_POST["pwd"], $user["password"])) {
+if ($client && password_verify($_POST["pwd"], $client["password"])) {
     $_SESSION["connected"] = true ;
-    $_SESSION["user_id"] = $user["id"];
+    $_SESSION["client_id"] = $client["id"];
 
-    unset($user["pwd"]);
+    unset($client["pwd"]);
 
-    echo json_encode(["sucsess" => true, "user0, => $user"]);
+    echo json_encode(["sucsess" => true, "client0, => $client"]);
 } else {
     $_SESSION = [];
     session_destroy();
